@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+sqlmodel
+psycopg2-binary
+pymupdf
+anthropic
+psycopg
+openai
+openai-whisper 
+moviepy
+shutil
+pathlib

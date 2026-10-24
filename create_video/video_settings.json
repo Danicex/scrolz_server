@@ -1,0 +1,27 @@
+{
+    "video_tmpl_1":{
+    "width": 1920,
+    "height": 1080,
+    "aspect_ratio": "1920:100",
+    "bg_transparent": true,
+    "bg_image":false,
+    "bg_sound":true
+    },
+    "video_tmpl_2":{
+    "width": 449,
+    "height": 387,
+    "aspect_ratio": "449:387",
+    "bg_transparent": false,
+    "bg_image":false,
+    "bg_sound":true
+    },
+    "video_tmpl_3":{
+    "width": 449,
+    "height": 387,
+    "aspect_ratio": "449:387",
+    "bg_transparent": false,
+    "bg_image":true,
+    "bg_sound":false
+    }
+
+}

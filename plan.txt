@@ -1,0 +1,45 @@
+-process pdf: 
+    convert text to chunk, summary, speech and quiz ✔️
+
+//when stage 1 is completed a job is raised stored in redis as que
+
+-create video: ✔️
+    use celery to run as task
+    check job from redis and run task
+    task: 
+        loop through json file,
+        for chunk in the file get visuals, use curl, llm to get images or stock video 
+
+        use manim, remotion to crate complex animation
+
+        compile visuals, audio, bg-sound, to create video and store in r2 store video path in db. 
+        
+-frontend:
+    user-feed: a shuffle of all converted pdfs rendered in social media scroll feed style
+
+    upload: upload pdf (must follow requirements)
+
+    library: render text in user friendly ui with (audio play, quiz, text-sumarry, ask questions, text settings) features
+
+    user_setting/profile: video settings: vioce, video layout. view profile
+
+-auth, subscription, authorization: 
+    use clerk for auth (fastapi, flutter)
+    subscription: token baised. buy tokens with google pay, token calcultion is given
+    authorization: download video (only vip), show ads to regular users. 
+
+what i need to do:
+------------------------------
+download and make public VoxCPM2
+test stage 1
+------------------------------
+create auth/and connect frontend to server/v1
+
+
+
+
+upload api
+    -store pdf
+    -call run_process_pdf(pdf_path) task //create redis queue
+    -run_process_pdf creates chunk/quiz/audio/sumarry ans store in db
+    -once task is completed run_video_pipeline starts
